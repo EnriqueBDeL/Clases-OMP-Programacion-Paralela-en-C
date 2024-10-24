@@ -22,7 +22,7 @@ int main (int argc, char **argv){
 	double a[1000];
 
 
-	#pragma omp parallel for    //''#programa omp parallel'', permite que el bucle for se ejecute en paralelo.
+	#pragma omp parallel for    //''#pragma omp parallel'', permite que el bucle for se ejecute en paralelo.
 
 
 	for (int i = 0; i < 100; i++){
