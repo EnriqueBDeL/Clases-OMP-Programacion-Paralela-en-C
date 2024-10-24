@@ -1,14 +1,12 @@
 // OpenMP
 
 /*
-  
     
   OpenMP es una API que facilita la programacion paralela en sistemas conmultiples procesadores o nucleos.
   
   omp.h es una libreria de cabecera en C que proporciona las funciones y directivas necesarias para
   utilizar OpenMP.
 
- 
  */
 
 
@@ -24,13 +22,7 @@ int main (int argc, char **argv){
 	double a[1000];
 
 
-/*
-
-   ''#programa omp parallel'', permite que el bucle for se ejecute en paralelo.
-    
-
-*/
-	#pragma omp parallel for
+	#pragma omp parallel for    //''#programa omp parallel'', permite que el bucle for se ejecute en paralelo.
 
 
 	for (int i = 0; i < 100; i++){
