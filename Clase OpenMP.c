@@ -34,7 +34,7 @@ int main (int argc, char **argv){
 
       	for (int i = 0; i < 100; i++){
 
-            printf("%na[%d] vale: %lf%n",i,a[i]);
+            printf("\na[%d] vale: %lf\n",i,a[i]);
 
         }
 
