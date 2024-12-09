@@ -9,7 +9,7 @@ int main(int argc, char **argv){
 
 
 
-	printf("%nEl tamano de la arquitectura de la maquina es: %zu bits%n",sizeof(size_t) * 8);
+	printf("\nEl tamano de la arquitectura de la maquina es: %zu bits\n",sizeof(size_t) * 8);
 	
 
 
@@ -26,7 +26,7 @@ int main(int argc, char **argv){
 if(array == NULL){
 
 
-	printf("%nNo se pudo asignar memoria%n");
+	printf("\nNo se pudo asignar memoria\n");
 
 	return 1;
 
@@ -66,7 +66,7 @@ double duracion = fin - empezar;
 double ancho_de_banda = (tamano / (1020.0 * 1024.0 * 1024.0)) / duracion; //Formula ancho de banda
 
 
-printf("%nAncho de banda: %f GB/seg%n%n",ancho_de_banda);
+printf("\nAncho de banda: %f GB/seg\n\n",ancho_de_banda);
 
 free(array);
 
