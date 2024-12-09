@@ -26,6 +26,36 @@ Orden:
     <button>[Critical]</button>
   </a>
   <br>
+    Clase 6 
+  <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Clase%20wtime.c" target="_blank">
+    <button>[Wtime]</button>
+  </a>
+  <br>
+      Clase 7 
+  <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Clase%20Reduccion.c" target="_blank">
+    <button>[Reduccion]</button>
+  </a>
+  <br>
+      Clase 8 
+  <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Clase%20sections.c" target="_blank">
+    <button>[Sections]</button>
+  </a>
+  <br>
+      Clase 9
+  <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Clase%20FIRSTPRIVATE%20y%20LASTPRIVATE.c" target="_blank">
+    <button>[Firstprivate y Lastprivate]</button>
+  </a>
+  <br>
+      Clase 10
+  <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Clase%20Collapse.c" target="_blank">
+    <button>[Collapse]</button>
+  </a>
+  <br>
+      Clase 11
+  <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Clase%20master.c" target="_blank">
+    <button>[Master]</button>
+  </a>
+  <br>
 </div>
 
 
