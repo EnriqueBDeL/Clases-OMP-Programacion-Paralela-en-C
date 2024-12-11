@@ -66,6 +66,11 @@ Orden:
     <button>[Calcular Ancho de Banda]</button>
   </a>
   <br>
+       Clase 14
+  <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Clase%20schedule.c" target="_blank">
+    <button>[Schedule]</button>
+  </a>
+  <br>
 </div>
 
 
