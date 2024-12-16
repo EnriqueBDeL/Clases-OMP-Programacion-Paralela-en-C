@@ -20,19 +20,19 @@ Orden:
   <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Clase%20Barreras.c" target="_blank">
     <button>[Barreras]</button>
   </a>
+    <br>
+   Clase 5
+  <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Clase%20Critical.c" target="_blank">
+    <button>[Critical]</button>
+  </a>
   <br>
-  Clase 5 
+  Clase 6 
   <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Clase%20SHARED%20y%20PRIVATE.c" target="_blank">
     <button>[Shared y Private]</button>
   </a>
     &nbsp;
     <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Clase%20SHARED%20y%20PRIVATE%20II.c" target="_blank">
     <button>[Shared y Private II]</button>
-  </a>
-  <br>
-  Clase 6 
-  <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Clase%20Critical.c" target="_blank">
-    <button>[Critical]</button>
   </a>
   <br>
     Clase 7 
