@@ -83,7 +83,7 @@ Orden:
 Extra:
 <div>
   Clase argv 
-  <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Clase%20schedule.c" target="_blank">
+  <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Clase%20argv%20I.c" target="_blank">
     <button>[argv I]</button>
       </a>
 </div>
