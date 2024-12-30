@@ -11,7 +11,7 @@ int main(int argc, char **argv){
 
     // Ejemplo: ./nombre_programa hola mundo
 
-    printf("\nEl programa recibió %d argumentos:\n\n", argc);
+    printf("\nEl programa recibio %d argumentos:\n\n", argc);
 
     for (int i = 0; i < argc; i++) {
         printf("Argumento %d: %s\n", i, argv[i]);
