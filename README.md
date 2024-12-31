@@ -68,12 +68,7 @@ Orden:
     <button>[Master]</button>
   </a>
   <br>
-      Clase 13
-  <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Calcular%20Ancho%20de%20Banda.c" target="_blank">
-    <button>[Calcular Ancho de Banda]</button>
-  </a>
-  <br>
-       Clase 14
+       Clase 13
   <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Clase%20schedule.c" target="_blank">
     <button>[Schedule]</button>
   </a>
@@ -87,8 +82,14 @@ Extra:
 <div>
   Clase argv 
   <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Clase%20argv%20I.c" target="_blank">
-    <button>[argv I]</button>
+    <button>[argv]</button>
       </a>
+    <br>
+      Clase Ancho de Banda
+  <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Calcular%20Ancho%20de%20Banda.c" target="_blank">
+    <button>[Calcular Ancho de Banda]</button>
+  </a>
+
 </div>
 
 
