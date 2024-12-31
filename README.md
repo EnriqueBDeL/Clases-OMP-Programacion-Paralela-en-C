@@ -44,6 +44,9 @@ Orden:
   <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Clase%20Reduccion.c" target="_blank">
     <button>[Reduccion]</button>
   </a>
+    <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Clase%20Reduccion%20II.c" target="_blank">
+    <button>[Reduccion II]</button>
+  </a>
   <br>
       Clase 9 
   <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Clase%20sections.c" target="_blank">
