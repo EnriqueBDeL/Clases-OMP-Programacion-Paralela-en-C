@@ -5,6 +5,7 @@
    1. El codigo es paralelizable si las operaciones se pueden realizar de manera independiente, sin que una operacion dependa del resultado de otra operacion.
  
 */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <omp.h>
