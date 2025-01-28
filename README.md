@@ -73,6 +73,19 @@ Orden:
     <button>[Schedule]</button>
   </a>
   <br>
+        Clase 14
+  <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Cuando%20es%20un%20Codigo%20Paralelizable.c" target="_blank">
+    <button>[Cuando es un Codigo Paralelizable]</button>
+  </a>
+      &nbsp;
+    <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Cuando%20es%20un%20Codigo%20Paralelizable%20II.c" target="_blank">
+    <button>[Cuando es un Codigo Paralelizable II]</button>
+  </a>
+       &nbsp;
+    <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Cuando%20es%20un%20Codigo%20Paralelizable%20III.c" target="_blank">
+    <button>[Cuando es un Codigo Paralelizable III]</button>
+  </a>
+  <br>
 </div>
 
 <br>
