@@ -85,6 +85,10 @@ Orden:
     <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Cuando%20es%20un%20Codigo%20Paralelizable%20III.c" target="_blank">
     <button>[Cuando es un Codigo Paralelizable III]</button>
   </a>
+         &nbsp;
+    <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Cuando%20es%20un%20Codigo%20Paralelizable%20Resumen.txt" target="_blank">
+    <button>[Cuando es un Codigo Paralelizable Resumen]</button>
+  </a>
   <br>
 </div>
 
