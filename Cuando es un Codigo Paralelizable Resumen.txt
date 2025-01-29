@@ -108,11 +108,13 @@ Solución: Usar reduction(+:total) o una sección crítica
 --------------------------------------------------------|
 
 ---------------------------------------------------------------------------------------------------------------
+
 3. Hay muchas sincronizaciones costosa.
 	Si el programa tiene muchas barreras (#pragma omp barrier), puede que el costo de coordinación entre hilos 
 	haga que la paralelización sea más lenta que la versión secuencial.
 
 ---------------------------------------------------------------------------------------------------------------
+
 4.  Código con muchas ramas condicionales dinámicas (if-else con variaciones entre iteraciones).
 	Si cada hilo tiene un comportamiento muy diferente, la paralelización puede ser ineficiente 
 	debido a desequilibrios de carga.
