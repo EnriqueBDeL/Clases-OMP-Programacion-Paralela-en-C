@@ -1,0 +1,158 @@
+Un código es paralelizable cuando...
+
+
+1. Las tareas son independientes.
+
+	Si varias operaciones pueden ejecutarse sin depender unas de otras, el código es paralelizable.
+
+
+
+Ejemplo:
+
+
+#pragma omp parallel for
+
+for (int i = 0; i < n; i++) {
+
+    C[i] = A[i] + B[i]; // Cada iteración es independiente.
+
+}
+
+
+---------------------------------------------------------------------------------------------------------------
+
+2. No hay dependencia de datos entre iteraciones.
+
+	Si una iteración depende de los resultados de una iteración previa, puede ser difícil paralelizar.
+
+
+Ejemplo:
+
+
+#pragma omp parallel for
+
+for (int i = 0; i < n; i++) {
+
+    D[i] = A[i] * 2;  // No depende de otros valores.
+
+}
+
+
+---------------------------------------------------------------------------------------------------------------
+
+3. No hay condiciones de carrera o se pueden evitar
+
+	Si múltiples hilos escriben en la misma variable sin sincronización, hay una condición de carrera.
+
+	Se puede usar secciones críticas (#pragma omp critical) o reducciones (reduction) para evitar problemas.
+
+
+Ejemplo:
+
+
+int suma = 0;
+
+#pragma omp parallel for reduction(+:suma)
+
+for (int i = 0; i < n; i++) {
+
+    suma += A[i];  // Evita condiciones de carrera.
+
+}
+
+
+---------------------------------------------------------------------------------------------------------------
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+---------------------------------------------------------------------------------------------------------------
+
+
+Un código NO es paralelizable cuando...
+
+
+
+1. Hay dependencias entre iteraciones.
+
+
+
+Ejemplo:
+
+for (int i = 1; i < n; i++) {
+
+    A[i] = A[i - 1] * 2;  // La iteración i depende de la i-1.
+
+}
+
+
+---------------------------------------------------------------------------------------------------------------
+
+2. Hay acceso compartido sin sincronización.
+	Si varios hilos escriben en la misma variable sin control, los resultados son impredecibles
+
+
+Ejemplo:
+
+
+int total = 0;
+
+
+#pragma omp parallel for
+
+for (int i = 0; i < n; i++) {
+
+    total += A[i];  // Condición de carrera.
+
+}
+
+--------------------------------------------------------|
+Solución: Usar reduction(+:total) o una sección crítica
+--------------------------------------------------------|
+
+---------------------------------------------------------------------------------------------------------------
+3. Hay muchas sincronizaciones costosa.
+	Si el programa tiene muchas barreras (#pragma omp barrier), puede que el costo de coordinación entre hilos 
+	haga que la paralelización sea más lenta que la versión secuencial.
+
+---------------------------------------------------------------------------------------------------------------
+4.  Código con muchas ramas condicionales dinámicas (if-else con variaciones entre iteraciones).
+	Si cada hilo tiene un comportamiento muy diferente, la paralelización puede ser ineficiente 
+	debido a desequilibrios de carga.
+
+
+Ejemplo:
+
+
+#pragma omp parallel for
+
+for (int i = 0; i < n; i++) {
+
+    if (i % 10 == 0) {    // Algunas iteraciones toman mucho más tiempo. 
+			  // Algunos hilos pueden terminar rápido y quedarse inactivos mientras otros siguen trabajando.
+
+        hacer_trabajo_pesado();
+
+    } else {
+
+        hacer_trabajo_ligero();
+    }
+}
+
+------------------------------------------------------------------------|
+Solución: Distribuir dinámicamente el trabajo usando schedule(dynamic).
+------------------------------------------------------------------------|
+
+---------------------------------------------------------------------------------------------------------------
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+---------------------------------------------------------------------------------------------------------------
+
+
+Regla general.
+
+ - Se puede paralelizar cuando las tareas pueden ejecutarse en paralelo sin depender unas de otras.
+
+ - No se puede cuando hay dependencias fuertes o acceso concurrente a la misma variable sin control.
+
+
+---------------------------------------------------------------------------------------------------------------
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+---------------------------------------------------------------------------------------------------------------
+
