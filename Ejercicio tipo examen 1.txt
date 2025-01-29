@@ -1,0 +1,109 @@
+------------------------|
+Paraleliza este código:
+------------------------|
+
+#include <iostream>
+
+bool is_impar(int num) {
+
+    return num % 2 != 0;  // Regresa true si el número es impar
+
+}
+
+void contar_impares(int *a, int size) {
+
+    if (size == 0)
+
+        return;
+
+    int count = 0, i = 0;
+
+    // Usando un bucle do-while para contar números impares
+    do {
+
+        if (is_impar(a[i])) {
+
+            ++count;  // Incrementamos el contador si es impar
+
+        }
+
+        ++i;
+
+    } while (i < size);
+
+
+    std::cout << "Encontramos " << count << " números impares." << std::endl;
+
+}
+
+
+
+int main() {
+
+
+    int array[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+    int size = sizeof(array) / sizeof(array[0]);
+
+    contar_impares(array, size);
+
+    return 0;
+}
+
+
+--------------------------------------------------------------------------------------------------------------|
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+--------------------------------------------------------------------------------------------------------------|
+
+-----------|
+Resultado:
+-----------|
+
+
+#include <iostream>
+#include <omp.h>
+
+bool is_impar(int num) {
+
+    return num % 2 != 0;  // Regresa true si el número es impar
+
+}
+
+void omp_contar_impares(int *a, int size) {
+
+    if (size == 0)
+
+        return;
+
+    int count = 0;
+
+
+ #pragma omp parallel for reduction(+:count)
+
+    for (int i = 0; i < size; i++) {
+
+        if (is_impar(a[i])) {
+
+            ++count;  // Incrementamos el contador si es impar
+        }
+    }
+
+    std::cout << "Encontramos " << count << " números impares." << std::endl;
+}
+
+
+
+int main() {
+
+    int array[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+    int size = sizeof(array) / sizeof(array[0]);
+
+    omp_contar_impares(array, size);
+
+    return 0;
+}
+
+
+
+
