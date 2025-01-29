@@ -1,0 +1,101 @@
+------------------------|
+Paraleliza este código:
+------------------------|
+
+
+#include <iostream>
+
+void analizar_temperaturas(float *temps, int size) {
+    if (size == 0)
+        return;
+
+    int dias_calor = 0; // Días con temperatura > 30°C
+    float suma_temp = 0; // Suma total de temperaturas
+    int i = 0, j = 0;
+
+    // Primer do-while: Contar días con temperatura > 30°C
+    do {
+        if (temps[i] > 30.0) {
+            ++dias_calor;
+        }
+        ++i;
+    } while (i < size);
+
+    // Segundo do-while: Calcular la suma de temperaturas
+    do {
+        suma_temp += temps[j];
+        ++j;
+    } while (j < size);
+
+    float promedio = suma_temp / size;
+    std::cout << "Hubo " << dias_calor << " días calurosos.\n";
+    std::cout << "Temperatura promedio: " << promedio << "°C\n";
+
+}
+
+
+int main() {
+    float temperaturas[] = {28.5, 32.1, 29.4, 35.0, 33.3, 31.8, 26.7, 30.5, 29.0, 27.5};
+    int size = sizeof(temperaturas) / sizeof(temperaturas[0]);
+
+    analizar_temperaturas(temperaturas, size);
+    return 0;
+}
+
+
+--------------------------------------------------------------------------------------------------------------|
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+--------------------------------------------------------------------------------------------------------------|
+
+
+
+-----------|
+Resultado:
+-----------|
+
+
+
+#include <iostream>
+#include <omp.h>
+
+void omp_analizar_temperaturas(float *temps, int size) {
+    if (size == 0)
+        return;
+
+    int dias_calor = 0;
+    float suma_temp = 0;
+
+    // Contar días con temperatura > 30°C 
+    #pragma omp parallel for reduction(+:dias_calor)
+    for (int i = 0; i < size; i++) {
+        if (temps[i] > 30.0) {
+            ++dias_calor;
+        }
+    }
+
+    // Calcular la suma de temperaturas 
+    #pragma omp parallel for reduction(+:suma_temp)
+    for (int j = 0; j < size; j++) {
+        suma_temp += temps[j];
+    }
+
+    float promedio = suma_temp / size;
+    std::cout << "Hubo " << dias_calor << " días calurosos.\n";
+    std::cout << "Temperatura promedio: " << promedio << "°C\n";
+}
+
+
+
+int main() {
+
+    float temperaturas[] = {28.5, 32.1, 29.4, 35.0, 33.3, 31.8, 26.7, 30.5, 29.0, 27.5};
+    int size = sizeof(temperaturas) / sizeof(temperaturas[0]);
+
+
+    omp_analizar_temperaturas(temperaturas, size);
+
+
+    return 0;
+}
+
+
