@@ -94,15 +94,30 @@ Orden:
 
 <br>
 
+Ejercicios tipo examen:
+<div>
+  - Ejercicio 1 
+  <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Ejercicio%20tipo%20examen%201.txt" target="_blank">
+    <button>[Ejercicio 1]</button>
+      </a>
+    <br>
+  - Ejercicio 2 
+  <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Ejercicio%20tipo%20examen%202.txt" target="_blank">
+    <button>[Ejercicio 2]</button>
+  </a>
+
+</div>
+
+<br>
 
 Extra:
 <div>
-  Clase argv 
+  - Clase argv 
   <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Clase%20argv%20I.c" target="_blank">
     <button>[argv]</button>
       </a>
     <br>
-      Clase Ancho de Banda
+    - Clase Ancho de Banda
   <a href="https://github.com/EnriqueBDeL/Clases-OMP-Programacion-Paralela-en-C/blob/main/Calcular%20Ancho%20de%20Banda.c" target="_blank">
     <button>[Calcular Ancho de Banda]</button>
   </a>
