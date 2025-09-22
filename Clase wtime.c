@@ -22,8 +22,9 @@ int main (int argc, char **argv){
 	terminar = omp_get_wtime();
 
 
-	printf("Tiempo transcurrido: %f segundos%n", terminar - empezar);
+	printf("Tiempo transcurrido: %f segundos\n", terminar - empezar);
 
 
 return 0;
+
 }	
