@@ -34,7 +34,10 @@ int main(int argc, char **argv){
 		printf("\n Hilo: %d | suma = %d", omp_get_thread_num(), suma);
 	}	
 
+  	printf("%nSuma = %d",suma);
+	
 	 printf("\n");
 
 	 return 0;
+
 }
